@@ -1,0 +1,24 @@
+BGMI GFX BOOSTER - Integrated Android source project
+यह APK नहीं, पूरा Android Studio source project है। APK बनाने से पहले Android Studio में Gradle Sync और Build करना होगा।
+
+इस build में implemented:
+- Dashboard + HIGH/MID/LOW in-app modes
+- BOOST NOW: RAM/battery/temperature status refresh और स्पष्ट safe status (दूसरी app की RAM force-clear/CPU-GPU overclock नहीं)
+- BGMI launch (package com.pubg.imobile)
+- Sensitivity page: केवल Camera, ADS, Gyroscope, Gyroscope ADS; values app में save होती हैं
+- Gyroscope hardware sensor availability + live sensor movement test (यह BGMI input delay नहीं मापता)
+- Super Smooth / Balanced / Quality profile guidance (BGMI की graphics setting अपने-आप नहीं बदलती)
+- RAM, battery percentage और battery temperature monitoring
+- Optional edge overlay side panel; user को “Display over other apps” permission देना होगा
+
+Limitations / not falsely advertised:
+- BGMI का actual FPS सामान्य third-party app reliably नहीं पढ़ सकता; UI में Unsupported दिखता है।
+- Overlay कुछ games/Android versions में छिप सकता है या game इसे block कर सकता है।
+- DND को खोलने के लिए notification policy access user को देना पड़ सकता है।
+- Screenshot/recording of BGMI requires Android MediaProjection consent; this build में capture/recording शुरू नहीं की जाती।
+- Brightness shortcut opens display settings; it does not silently change system brightness.
+- No aim assist, recoil scripts, game memory editing, injection, overclocking or cheating.
+
+Open folder in Android Studio, allow Gradle sync, then Build > Build APK(s).
+Package: com.example.bgmigfxbooster
+BGMI package constant: MainActivity.kt (com.pubg.imobile). If your installed BGMI uses another package, adjust it.
